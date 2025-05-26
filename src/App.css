@@ -1,0 +1,14 @@
+.button.tgme_widget_login_button{
+    background-color: #fafafa;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
