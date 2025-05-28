@@ -80,7 +80,7 @@ export function Header() {
         {/* Логотип */}
         <Link to="/" className="flex items-center ml-8 gap-2">
           <img
-            src="/src/shared/assets/logo.png"
+            src="/images/logo.png"
             className="w-[66px] h-[60px] object-cover"
             alt="Logo"
           />
@@ -128,7 +128,7 @@ export function Header() {
                       return (
                         <div className="flex items-center gap-2">
                           <img
-                            src="src/shared/assets/russia.png"
+                            src="/images/russia.png"
                             className="w-5 h-4"
                           />
                           Русский
@@ -138,7 +138,7 @@ export function Header() {
                       return (
                         <div className="flex items-center gap-2">
                           <img
-                            src="src/shared/assets/english.png"
+                            src="/images/english.png"
                             className="w-5 h-4"
                           />
                           English
@@ -148,7 +148,7 @@ export function Header() {
                       return (
                         <div className="flex items-center gap-2">
                           <img
-                            src="src/shared/assets/kyrgyzstan.png"
+                            src="/images/kyrgyzstan.png"
                             className="w-5 h-4"
                           />
                           Кыргызча
@@ -164,7 +164,7 @@ export function Header() {
               <MenuItem value="Русский">
                 <div className="flex items-center gap-2">
                   <img
-                    src="src\shared\assets\russia.png"
+                    src="/images/russia.png"
                     alt="RU"
                     className="w-5 h-4 object-cover"
                   />
