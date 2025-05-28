@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import CalendarFilter from "../../features/CalendarFilter";
 import { fetchUserData } from "../../entities/model/authApi";
-
+import homeImage from "src/shared/assets/home.png";
 function Home() {
   const dispatch = useDispatch();
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
@@ -233,11 +233,7 @@ function Home() {
             {currentContent.button}
           </button>
         </div>
-        <img
-          className="h-[450px] w-[843px]"
-          src="src\shared\assets\home.png"
-          alt=""
-        />
+        <img className="h-[450px] w-[843px]" src={homeImage} alt="Home" />
       </section>
       <section className="container mx-auto py-10">
         <div className="flex items-center justify-between flex-wrap gap-4">
