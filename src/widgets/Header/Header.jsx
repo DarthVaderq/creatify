@@ -204,9 +204,9 @@ export function Header() {
             <Link to="/contacts" className="text-gray-700 hover:text-black">
               {currentContent.Contact}
             </Link>
-            {/* <Link to="/rating" className="text-gray-700 hover:text-black">
+            <Link to="/rating" className="text-gray-700 hover:text-black">
               {currentContent.Rating}
-            </Link>*/}
+            </Link>
 
             {/* Кнопка Вход/Профиль */}
             {isLoading ? (

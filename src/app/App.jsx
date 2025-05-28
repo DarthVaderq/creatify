@@ -11,6 +11,7 @@ import Description from '../pages/Description/Description';
 import Card from '../pages/Card/Card';
 import ForgotPassword from '../pages/Login/ForgotPassword';
 import ResetPassword from '../pages/Login/ResetPassword';
+import Rating from '../pages/Rating/Rating';
 const App = () => {
   return (
   <LanguageProvider>
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/About" element={<About />} />
         <Route path="/contacts" element={<Contact />} />
         <Route path="/card" element={<Card />} />
+        <Route path="/rating" element={<Rating />} />
         <Route path="/description/:id" element={<Description />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
