@@ -79,11 +79,9 @@ export function Header() {
       <Toolbar className="flex items-center">
         {/* Логотип */}
         <Link to="/" className="flex items-center ml-8 gap-2">
-          <img
-            src="/images/logo.png"
-            className="w-[66px] h-[60px] object-cover"
-            alt="Logo"
-          />
+<svg xmlns="http://www.w3.org/2000/svg" width="89" height="89" viewBox="0 0 89 89">
+  <path d="M 0,0 L 0,88 L 88,88 L 88,0 Z" fill="black"/>
+</svg>
         </Link>
         {/*
           Переключатель темы 
