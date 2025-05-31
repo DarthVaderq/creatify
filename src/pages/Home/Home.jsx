@@ -81,7 +81,7 @@ function Home() {
 
     try {
       const response = await axios.patch(
-        `http://localhost:4444/projects/${projectId}/like`,
+        `http://5.129.197.221:4444/projects/${projectId}/like`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
