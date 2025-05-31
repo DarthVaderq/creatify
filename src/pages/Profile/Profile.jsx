@@ -13,7 +13,7 @@ function Profile() {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:4444/profile", {
+        const res = await axios.get("https://api.creatifytech.online/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -32,7 +32,7 @@ function Profile() {
   const handleDelete = async (projectId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:4444/projects/${projectId}`, {
+      await axios.delete(`https://api.creatifytech.online/projects/${projectId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setProjects((prev) => prev.filter((p) => p._id !== projectId));

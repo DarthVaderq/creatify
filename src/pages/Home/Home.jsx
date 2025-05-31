@@ -81,7 +81,7 @@ function Home() {
 
     try {
       const response = await axios.patch(
-        `http://5.129.197.221:4444/projects/${projectId}/like`,
+        `https://api.creatifytech.online/projects/${projectId}/like`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -129,7 +129,7 @@ function Home() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("http://localhost:4444/categories");
+        const response = await axios.get("https://api.creatifytech.online/categories");
         const uniqueCategories = response.data
           .map((cat) => cat.name)
           .filter((cat) => cat !== "Всё");

@@ -48,7 +48,7 @@ function Footer() {
             <Link to="/" className="hover:underline">{currentContent.home}</Link>
             <Link to="/about" className="hover:underline">{currentContent.about}</Link>
             <Link to="/contact" className="hover:underline">{currentContent.Contact}</Link>
-            {/*<Link to="/rating" className="hover:underline">{currentContent.Rating}</Link>*/}
+            <Link to="/rating" className="hover:underline">{currentContent.Rating}</Link>
             <Link to="/login" className="hover:underline">{currentContent.login}</Link>
           </div>
 

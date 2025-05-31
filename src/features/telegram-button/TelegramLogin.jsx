@@ -25,7 +25,7 @@ const TelegramLogin = () => {
 
     // Глобальный callback
     window.onTelegramAuth = function (user) {
-      fetch("http://localhost:4444/auth/telegram", {
+      fetch("https://api.creatifytech.online/auth/telegram", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

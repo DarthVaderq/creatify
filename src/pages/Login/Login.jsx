@@ -59,7 +59,7 @@ const Login = () => {
           </h2>
 
           <a
-            href="http://localhost:4444/auth/google"
+            href="https://api.creatifytech.online/auth/google"
             className="w-full flex items-center justify-center gap-2 bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-300 mb-4"
           >
             <img

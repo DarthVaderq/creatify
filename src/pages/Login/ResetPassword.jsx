@@ -23,7 +23,7 @@ const ResetPassword = () => {
     }
 
     try {
-        const res = await fetch("http://localhost:4444/auth/reset-password", {
+        const res = await fetch("https://api.creatifytech.online/auth/reset-password", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

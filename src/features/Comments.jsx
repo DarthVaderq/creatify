@@ -9,7 +9,7 @@ function Comments({ projectId }) {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:4444/comments/${projectId}`)
+      .get(`https://api.creatifytech.online/comments/${projectId}`)
       .then((res) => {
         console.log("Полученные комментарии:", res.data);
         setComments(Array.isArray(res.data) ? res.data : []);
@@ -33,7 +33,7 @@ function Comments({ projectId }) {
   
     try {
       const res = await axios.post(
-        "http://localhost:4444/comments",
+        "https://api.creatifytech.online/comments",
         {
           projectId,
           text, // ✅ правильно

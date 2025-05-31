@@ -28,7 +28,7 @@ function Card() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("http://localhost:4444/categories");
+        const response = await axios.get("https://api.creatifytech.online/categories");
         setCategories(response.data);
         setLoading(false);
       } catch (err) {
@@ -43,7 +43,7 @@ function Card() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("http://localhost:4444/projects");
+        const response = await axios.get("https://api.creatifytech.online/projects");
         setProjects(response.data);
       } catch (err) {
         console.error(
@@ -101,7 +101,7 @@ function Card() {
 
     try {
       const response = await axios.post(
-        "http://localhost:4444/projects",
+        "https://api.creatifytech.online/projects",
         formData,
         {
           headers: {

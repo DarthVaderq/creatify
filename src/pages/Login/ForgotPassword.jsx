@@ -16,7 +16,7 @@ const ForgotPassword = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:4444/auth/forgot-password", {
+      const res = await fetch("https://api.creatifytech.online/auth/forgot-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

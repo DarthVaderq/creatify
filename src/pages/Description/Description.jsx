@@ -20,7 +20,7 @@ function Description() {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const res = await axios.get(`http://localhost:4444/projects/${id}`);
+        const res = await axios.get(`https://api.creatifytech.online/projects/${id}`);
         setProject(res.data);
       } catch (err) {
         console.error("Ошибка при загрузке проекта:", err);
@@ -43,7 +43,7 @@ function Description() {
 
     try {
       const response = await axios.patch(
-        `http://localhost:4444/projects/${id}/like`,
+        `https://api.creatifytech.online/projects/${id}/like`,
         {},
         {
           headers: {
@@ -111,7 +111,7 @@ function Description() {
             >
               {project.images?.length ? (
                 project.images.map((filePath, idx) => {
-                  const fullUrl = `http://localhost:4444${filePath}`;
+                  const fullUrl = `https://api.creatifytech.online${filePath}`;
                   const isVideo = /\.(mp4|webm|ogg)$/i.test(fullUrl);
 
                   return (
