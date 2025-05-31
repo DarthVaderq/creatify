@@ -144,7 +144,7 @@ function Home() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("http://5.129.197.221:4444/projects", {
+        const response = await axios.get("https://api.creatifytech.online/projects", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
