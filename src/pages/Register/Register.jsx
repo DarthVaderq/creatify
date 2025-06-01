@@ -36,7 +36,8 @@ const Register = () => {
       await dispatch(register({ email, password, lastName, firstName, fullName })).unwrap();
       setSuccessMessage("Проверьте электронную почту для подтверждения регистрации ✅");
     } catch (err) {
-      const errorMessage = err.message || "Ошибка при регистрации";
+      // Показываем подробное сообщение от сервера, если оно есть
+      const errorMessage = err.response?.data?.message || err.message || "Ошибка при регистрации";
       setError(errorMessage);
     }
   };

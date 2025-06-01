@@ -1,8 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
-axios.defaults.baseURL = "https://api.creatifytech.online";
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || "https://api.creatifytech.online";
 export const fetchUserData = createAsyncThunk(
   "auth/fetchUserData",
   async (_, { rejectWithValue }) => {
