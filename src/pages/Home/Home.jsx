@@ -233,7 +233,7 @@ function Home() {
             {currentContent.button}
           </button>
         </div>
-        <img class="h-[450px] w-[843px]" src="/public/home.png" alt="Home" />
+        <img class="h-[450px] w-[843px]" src="/home.png" alt="Home" />
       </section>
       <section className="container mx-auto py-10">
         <div className="flex items-center justify-between flex-wrap gap-4">
