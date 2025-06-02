@@ -69,7 +69,6 @@ export function Header() {
     document.body.style.backgroundColor = darkMode ? "white" : "#121212"; // Переключение темы
   };
 
-
   return (
     <AppBar
       style={{ background: "white" }}
@@ -79,9 +78,7 @@ export function Header() {
       <Toolbar className="flex items-center">
         {/* Логотип */}
         <Link to="/" className="flex items-center ml-8 gap-2">
-<svg xmlns="http://www.w3.org/2000/svg" width="89" height="89" viewBox="0 0 89 89">
-  <path d="M 0,0 L 0,88 L 88,88 L 88,0 Z" fill="black"/>
-</svg>
+          <img class="h-[80px] w-[89px]" src="/public/logo.png" alt="Home" />
         </Link>
         {/*
           Переключатель темы 
@@ -125,20 +122,14 @@ export function Header() {
                     case "Русский":
                       return (
                         <div className="flex items-center gap-2">
-                          <img
-                            src="/images/russia.png"
-                            className="w-5 h-4"
-                          />
+                          <img src="/public/russia.png" className="w-5 h-4" />
                           Русский
                         </div>
                       );
                     case "English":
                       return (
                         <div className="flex items-center gap-2">
-                          <img
-                            src="/images/english.png"
-                            className="w-5 h-4"
-                          />
+                          <img src="/public/english.png" className="w-5 h-4" />
                           English
                         </div>
                       );
@@ -146,7 +137,7 @@ export function Header() {
                       return (
                         <div className="flex items-center gap-2">
                           <img
-                            src="/images/kyrgyzstan.png"
+                            src="/public/kyrgyzstan.png"
                             className="w-5 h-4"
                           />
                           Кыргызча
@@ -162,7 +153,7 @@ export function Header() {
               <MenuItem value="Русский">
                 <div className="flex items-center gap-2">
                   <img
-                    src="/images/russia.png"
+                    src="/public/russia.png"
                     alt="RU"
                     className="w-5 h-4 object-cover"
                   />
@@ -172,7 +163,7 @@ export function Header() {
               <MenuItem value="English">
                 <div className="flex items-center gap-2">
                   <img
-                    src="src\shared\assets\english.png"
+                    src="/public/english.png"
                     alt="EN"
                     className="w-5 h-4 object-cover"
                   />
@@ -182,7 +173,7 @@ export function Header() {
               <MenuItem value="Кыргызча">
                 <div className="flex items-center gap-2">
                   <img
-                    src="src\shared\assets\kyrgyzstan.png"
+                    src="public/kyrgyzstan.png"
                     alt="KG"
                     className="w-5 h-4 object-cover"
                   />
