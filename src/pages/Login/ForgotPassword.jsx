@@ -36,7 +36,7 @@ const ForgotPassword = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="bg-white p-8 flex flex-col items-center rounded-md shadow-md w-full max-w-md text-center">
-        <img src="src\shared\assets\keys.png" className="w-[100px] mb-5 h-[100px]" alt="" />
+        <img src="/keys.png" className="w-[100px] mb-5 h-[100px]" alt="" />
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">
           Забыли пароль?
         </h2>

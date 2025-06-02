@@ -78,7 +78,7 @@ export function Header() {
       <Toolbar className="flex items-center">
         {/* Логотип */}
         <Link to="/" className="flex items-center ml-8 gap-2">
-          <img class="h-[80px] w-[89px]" src="/public/logo.png" alt="Home" />
+          <img class="h-[80px] w-[89px]" src="/logo.png" alt="Home" />
         </Link>
         {/*
           Переключатель темы 
@@ -122,14 +122,14 @@ export function Header() {
                     case "Русский":
                       return (
                         <div className="flex items-center gap-2">
-                          <img src="/public/russia.png" className="w-5 h-4" />
+                          <img src="/russia.png" className="w-5 h-4" />
                           Русский
                         </div>
                       );
                     case "English":
                       return (
                         <div className="flex items-center gap-2">
-                          <img src="/public/english.png" className="w-5 h-4" />
+                          <img src="/english.png" className="w-5 h-4" />
                           English
                         </div>
                       );
@@ -137,7 +137,7 @@ export function Header() {
                       return (
                         <div className="flex items-center gap-2">
                           <img
-                            src="/public/kyrgyzstan.png"
+                            src="/kyrgyzstan.png"
                             className="w-5 h-4"
                           />
                           Кыргызча
@@ -153,7 +153,7 @@ export function Header() {
               <MenuItem value="Русский">
                 <div className="flex items-center gap-2">
                   <img
-                    src="/public/russia.png"
+                    src="/russia.png"
                     alt="RU"
                     className="w-5 h-4 object-cover"
                   />
@@ -163,7 +163,7 @@ export function Header() {
               <MenuItem value="English">
                 <div className="flex items-center gap-2">
                   <img
-                    src="/public/english.png"
+                    src="/english.png"
                     alt="EN"
                     className="w-5 h-4 object-cover"
                   />
@@ -173,7 +173,7 @@ export function Header() {
               <MenuItem value="Кыргызча">
                 <div className="flex items-center gap-2">
                   <img
-                    src="public/kyrgyzstan.png"
+                    src="/kyrgyzstan.png"
                     alt="KG"
                     className="w-5 h-4 object-cover"
                   />

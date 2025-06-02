@@ -48,9 +48,9 @@ const Register = () => {
         {/* Левая часть с изображением */}
         <div className="hidden md:flex flex-1 bg-blue-50 items-center justify-center p-8 flex-col">
           <img
-            src="\src\shared\assets\notebook.png"
+            src="/notebook.png"
             alt="Register Illustration"
-            className="h-[70vh] w-[90vh] ml-5"
+            className="h-[60vh] w-[90vh] ml-5"
           />
         </div>
 

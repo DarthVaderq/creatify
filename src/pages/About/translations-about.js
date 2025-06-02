@@ -28,25 +28,25 @@ const translations = {
         title: "Регистрация",
         description:
           "Зарегистрируйтесь на платформе через социальные сети или email.",
-        image: "src/shared/assets/about-images/Регистрация.png",
+        image: "/about-images/Регистрация.png",
       },
       {
         title: "Планирование",
         description:
           "Найдите интересующие вас проекты и изучите их описание и детали.",
-        image: "src/shared/assets/about-images/Поиск.png",
+        image: "/about-images/Поиск.png",
       },
       {
         title: "Голосование",
         description:
           "Голосуйте за понравившиеся вам проекты и помогайте создателям продвигаться вверх в рейтинге.",
-        image: "src/shared/assets/about-images/Голос.png",
+        image: "/about-images/Голос.png",
       },
       {
         title: "Следите за результатами",
         description:
           "Наблюдайте за изменениями в рейтинге проектов и успехами участников.",
-        image: "src/shared/assets/about-images/Результаты.png",
+        image: "/about-images/Результаты.png",
       },
     ],
     whyChooseUsTitle: "Почему выбирают наш сервис?",
@@ -55,31 +55,31 @@ const translations = {
         title: "Удобство работы",
         description:
           "Интуитивный интерфейс и моментальный отклик на действия позволяют быстро находить проекты и начинать работу.",
-        icon: "src/shared/assets/about-images/Удобство.png",
+        icon: "/about-images/Удобство.png",
       },
       {
         title: "Поддержка 24/7",
         description:
           "Мы всегда на связи! Техническая поддержка доступна круглосуточно, чтобы помочь с любыми вопросами и проблемами.",
-        icon: "src/shared/assets/about-images/время.png",
+        icon: "/about-images/время.png",
       },
       {
         title: "Широкий выбор категорий",
         description:
           "Найдите проекты в самых разных областях: от IT и дизайна до 3D-моделирования и маркетинга. Мы охватываем все направления.",
-        icon: "src/shared/assets/about-images/Категории.png",
+        icon: "/about-images/Категории.png",
       },
       {
         title: "Регистрация через соцсети",
         description:
           "Вы можете начать работу за считанные минуты с помощью регистрации через Google, Facebook или Telegram.",
-        icon: "src/shared/assets/about-images/вход.png",
+        icon: "/about-images/вход.png",
       },
       {
         title: "Оценка проектов сообществом",
         description:
           "Наше сообщество помогает выбрать лучшие проекты путем честного голосования и отзывов, что гарантирует качество.",
-        icon: "src/shared/assets/about-images/Оценка.png",
+        icon: "/about-images/Оценка.png",
       },
       {
         title: "",
@@ -134,25 +134,25 @@ const translations = {
       {
         title: "Registration",
         description: "Register on the platform via social networks or email.",
-        image: "src/shared/assets/about-images/Регистрация.png",
+        image: "/about-images/Регистрация.png",
       },
       {
         title: "Planning",
         description:
           "Find projects that interest you and explore their details.",
-        image: "src/shared/assets/about-images/Поиск.png",
+        image: "/about-images/Поиск.png",
       },
       {
         title: "Voting",
         description:
           "Vote for your favorite projects and help creators climb the rankings.",
-        image: "src/shared/assets/about-images/Голос.png",
+        image: "/about-images/Голос.png",
       },
       {
         title: "Track Results",
         description:
           "Observe changes in project rankings and participants' success.",
-        image: "src/shared/assets/about-images/Результаты.png",
+        image: "/about-images/Результаты.png",
       },
     ],
     whyChooseUsTitle: "Why choose our service?",
@@ -161,31 +161,31 @@ const translations = {
         title: "Ease of use",
         description:
           "Intuitive interface and instant response to actions allow you to quickly find projects and start working.",
-        icon: "src/shared/assets/about-images/Удобство.png",
+        icon: "/about-images/Удобство.png",
       },
       {
         title: "24/7 support",
         description:
           "We are always in touch! Technical support is available around the clock to help with any questions and problems.",
-        icon: "src/shared/assets/about-images/время.png",
+        icon: "/about-images/время.png",
       },
       {
         title: "Wide selection of categories",
         description:
           "Find projects in a variety of fields: from IT and design to 3D modeling and marketing. We cover all areas.",
-        icon: "src/shared/assets/about-images/Категории.png",
+        icon: "/about-images/Категории.png",
       },
       {
         title: "Registration via social networks",
         description:
           "You can get started in minutes by registering via Google, Facebook or Telegram.",
-        icon: "src/shared/assets/about-images/вход.png",
+        icon: "/about-images/вход.png",
       },
       {
         title: "Community rating of projects",
         description:
           "Our community helps to choose the best projects through honest voting and reviews, which guarantees quality.",
-        icon: "src/shared/assets/about-images/Оценка.png",
+        icon: "/about-images/Оценка.png",
       },
       {
         title: "",
@@ -241,25 +241,25 @@ const translations = {
         title: "Катталуу",
         description:
           "Социалдык тармактар же email аркылуу платформага катталыңыз.",
-        image: "src/shared/assets/about-images/Регистрация.png",
+        image: "/about-images/Регистрация.png",
       },
       {
         title: "Пландоо",
         description:
           "Сизди кызыктырган долбоорлорду таап, алардын сүрөттөмөсүн изилдеңиз.",
-        image: "src/shared/assets/about-images/Поиск.png",
+        image: "/about-images/Поиск.png",
       },
       {
         title: "Добуш берүү",
         description:
           "Сизге жаккан долбоорлорго добуш берип, авторлорго рейтингде жогорулаганга жардам бериңиз.",
-        image: "src/shared/assets/about-images/Голос.png",
+        image: "/about-images/Голос.png",
       },
       {
         title: "Жыйынтыктарды көзөмөлдөө",
         description:
           "Долбоорлордун рейтингиндеги өзгөрүүлөрдү жана катышуучулардын ийгиликтерин байкаңыз.",
-        image: "src/shared/assets/about-images/Результаты.png",
+        image: "/about-images/Результаты.png",
       },
     ],
     howItWorksTitle: "Бул кантип иштейт?",
@@ -268,25 +268,25 @@ const translations = {
         title: "Каттоо",
         description:
           "Социалдык тармактар ​​же электрондук почта аркылуу платформага катталыңыз.",
-        image: "src/shared/assets/about-images/Регистрация.png",
+        image: "/about-images/Регистрация.png",
       },
       {
         title: "Пландоо",
         description:
           "Сизди кызыктырган долбоорлорду таап, алардын сүрөттөмөсүн жана чоо-жайын изилдеңиз.",
-        image: "src/shared/assets/about-images/Поиск.png",
+        image: "/about-images/Поиск.png",
       },
       {
         title: "Добуш бериңиз",
         description:
           "Өзүңүзгө жаккан долбоорлорго добуш бериңиз жана жаратуучуларга рейтингде көтөрүлүүгө жардам бериңиз.",
-        image: "src/shared/assets/about-images/Голос.png",
+        image: "/about-images/Голос.png",
       },
       {
         title: "Натыйжаларды аткарыңыз",
         description:
           "Долбоордун рейтингдериндеги өзгөрүүлөргө жана катышуучулардын ийгиликтерине көз салыңыз.",
-        image: "src/shared/assets/about-images/Результаты.png",
+        image: "/about-images/Результаты.png",
       },
     ],
     whyChooseUsTitle: "Биздин кызматты эмне үчүн тандайсыз?",
@@ -295,31 +295,31 @@ const translations = {
         title: "Оңойлук Жумуш",
         description:
           "Интуитивдик интерфейс жана аракеттерге заматта жооп берүү долбоорлорду тез таап, иштей баштоого мүмкүндүк берет.",
-        icon: "src/shared/assets/about-images/Удобство.png",
+        icon: "/about-images/Удобство.png",
       },
       {
         title: "Колдоо 24/7",
         description:
           "Биз ар дайым байланыштабыз! Техникалык колдоо ар кандай суроолор же тынчсыздануулар менен жардам берүү үчүн күнү-түнү жеткиликтүү.",
-        icon: "src/shared/assets/about-images/время.png",
+        icon: "/about-images/время.png",
       },
       {
         title: "Кеңири категориялар",
         description:
           "Ар кандай тармактарда долбоорлорду табыңыз: IT жана дизайндан 3D моделдөө жана маркетингге чейин. Биз бардык аймактарды камтыйт.",
-        icon: "src/shared/assets/about-images/Категории.png",
+        icon: "/about-images/Категории.png",
       },
       {
         title: "Социалдык тармактар ​​аркылуу каттоо",
         description:
           "Сиз Google, Facebook же Telegram аркылуу катталып, бир нече мүнөттүн ичинде баштасаңыз болот.",
-        icon: "src/shared/assets/about-images/вход.png",
+        icon: "/about-images/вход.png",
       },
       {
         title: "Долбоорлорду коомчулуктун баалоосу",
         description:
           "Биздин коомчулук таза добуш берүү жана сапатка кепилдик берүү аркылуу мыкты долбоорлорду тандоого жардам берет.",
-        icon: "src/shared/assets/about-images/Оценка.png",
+        icon: "/about-images/Оценка.png",
       },
       {
         title: "",

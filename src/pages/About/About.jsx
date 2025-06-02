@@ -31,7 +31,7 @@ function About() {
       {/* Преимущества */}
       <section className="bg-[#F9FAFE] py-16">
         <div className="container flex flex-col mx-auto">
-          <img className="mr-10" src="src\shared\assets\about-images\Инфо.png" alt="" />
+          <img className="mr-10" src="/about-images/Инфо.png" alt="" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {currentContent.advantages.map((advantage, index) => (
               <div key={index} className="flex flex-col items-center">
@@ -147,7 +147,7 @@ function About() {
                   <span>{item.question}</span>
                   <span className="transition-transform duration-300 group-open:rotate-45 w-8 h-8 rounded-full flex items-center justify-center bg-purple-100">
                     <img
-                      src="src/shared/assets/about-images/плюс.png"
+                      src="/about-images/плюс.png"
                       alt="Плюс"
                       className="w-4 h-4"
                     />

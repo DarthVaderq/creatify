@@ -40,7 +40,7 @@ const Login = () => {
       <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl">
         <div className="hidden md:flex flex-1 bg-blue-50 items-center justify-center p-8 flex-col">
           <img
-            src="\src\shared\assets\pc-home.png"
+            src="/pc-home.png"
             alt="Login Illustration"
             className="max-w-full h-auto "
           />
@@ -63,7 +63,7 @@ const Login = () => {
             className="w-full flex items-center justify-center gap-2 bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-300 mb-4"
           >
             <img
-              src="src/shared/assets/footer-images/google.png"
+              src="/footer-images/google.png"
               alt="Google Icon"
               className="w-5 h-5"
             />

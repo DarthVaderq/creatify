@@ -30,7 +30,7 @@ function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="flex flex-col items-center bg-white rounded-[15px] shadow-md p-6">
               <img
-                src="src/shared/assets/contacts-images/phone.png"
+                src="/contacts-images/phone.png"
                 alt="Позвонить"
                 className="w-12 h-12 mb-4"
               />
@@ -41,7 +41,7 @@ function Contact() {
             </div>
             <div className="flex  flex-col items-center bg-white rounded-[15px] shadow-md p-6">
               <img
-                src="src/shared/assets/contacts-images/email.png"
+                src="/contacts-images/email.png"
                 alt="Написать"
                 className="w-12 mt-[5px] h-10 mb-4"
               />
@@ -52,7 +52,7 @@ function Contact() {
             </div>
             <div className="flex flex-col items-center bg-white rounded-[15px] shadow-md p-6">
               <img
-                src="src/shared/assets/contacts-images/map.png"
+                src="/contacts-images/map.png"
                 alt="Местоположение"
                 className="w-9 h-12 mb-4"
               />
@@ -70,7 +70,7 @@ function Contact() {
           <p className="text-center flex justify-center items-center rounded-[17px] mb-10 bg-[#E8E8F4] h-[41px] w-[351px]">
             <img
               className="mr-2"
-              src="src/shared/assets/contacts-images/smile.png"
+              src="/contacts-images/smile.png"
               alt="smile"
             />
             {currentContent.contactSubtitle}
