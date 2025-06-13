@@ -5,7 +5,7 @@ function Rating() {
         <>
         <main>
             <Header />
-            
+         
         </main>
         </>
     )

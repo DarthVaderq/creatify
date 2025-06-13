@@ -21,9 +21,9 @@ const translations = {
     home: "Негизги",
     about: "Кызмат жөнүндө",
     Contact: "Байланыштар",
-    Rating: "Рейтинг",
+    Rating: "Жогорку балл",
     login: "Кирүү",
-    profile: "Профиль",
+    profile: "Өздүк кабинет",
   },
 };
 export default translations;

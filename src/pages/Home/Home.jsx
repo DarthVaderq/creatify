@@ -260,11 +260,11 @@ function Home() {
             </div>
 
             {/* Поле поиска */}
-            <div className="flex items-center bg-white rounded-full px-3 py-1 flex-grow">
+            <div className="flex items-center  bg-white rounded-full px-3 py-1 flex-grow">
               <input
                 type="text"
                 placeholder={currentContent.searchPlaceholder}
-                className="ml-2 outline-none w-full bg-transparent text-gray-700"
+                className="ml-5 outline-none w-full bg-transparent text-gray-700"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -436,7 +436,7 @@ function Home() {
                 return (
                   <div
                     key={project._id}
-                    className={`rounded-xl p-6 shadow ${style} transition`}
+                    className={`rounded-xl p-6 shadow ${style} transition w-full max-w-3xl mx-auto`}
                   >
                     <div className="flex justify-between items-start">
                       {/* Левая часть */}
