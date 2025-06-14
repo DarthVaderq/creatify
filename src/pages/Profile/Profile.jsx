@@ -172,9 +172,9 @@ function Profile() {
             </button>
             <button
               onClick={handleLogout}
-              className="px-4 py-1 border flex rounded ml-[210px] bg-red-100 text-red-600 hover:bg-red-200 transition text-sm"
+              className="px-4 py-1 border flex rounded ml-[180px] bg-red-100 text-red-600 hover:bg-red-200 transition text-sm"
             >
-              🚪 {currentContent.getout}
+              🚪{currentContent.getout}
             </button>
             </div>
           </div>
