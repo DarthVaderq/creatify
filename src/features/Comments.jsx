@@ -187,7 +187,7 @@ function Comments({ projectId }) {
               {editingId === comment._id ? (
                 <div className="flex flex-col">
                   <textarea
-                    className="w-full border rounded-xl px-2 py-1 mb-2"
+                    className="w-full border rounded-xl px-2 py-1 resize-none  mb-2"
                     value={editingText}
                     onChange={(e) => setEditingText(e.target.value)}
                     rows={2}
@@ -211,7 +211,16 @@ function Comments({ projectId }) {
                   </div>
                 </div>
               ) : (
-                <p className="text-gray-700 ml-1.5 text-sm">{comment.text}</p>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  {comment.text
+                    ? comment.text.match(/.{1,60}/g).map((part, idx) => (
+                        <span key={idx}>
+                          {part}
+                          <br />
+                        </span>
+                      ))
+                    : ""}
+                </p>
               )}
             </div>
           </div>

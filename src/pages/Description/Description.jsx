@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // Это должен быть правильный импорт
 import "swiper/css/navigation"; // Для стрелок навигации
 import "swiper/css/pagination"; // Для пагинации
-import { Navigation, Pagination } from "swiper/modules"; 
+import { Navigation, Pagination } from "swiper/modules";
 function Description() {
   const { id } = useParams();
 
@@ -20,7 +20,9 @@ function Description() {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const res = await axios.get(`https://api.creatifytech.online/projects/${id}`);
+        const res = await axios.get(
+          `https://api.creatifytech.online/projects/${id}`
+        );
         setProject(res.data);
       } catch (err) {
         console.error("Ошибка при загрузке проекта:", err);
@@ -87,7 +89,9 @@ function Description() {
       <main className="max-w-5xl mx-auto px-4 py-10">
         <div className="bg-white rounded-xl  shadow-md p-6">
           <h1 className="text-4xl font-bold text-gray-800 mb-2">
-            {project.title}
+            {project.title.length > 40
+              ? project.title.slice(0, 40) + "..."
+              : project.title}
           </h1>
           <p className="text-sm text-gray-500 mb-4">
             Автор:{" "}
@@ -102,7 +106,7 @@ function Description() {
           {/* Галерея изображений */}
           <div className="my-4">
             <Swiper
-               modules={[Navigation, Pagination]} 
+              modules={[Navigation, Pagination]}
               spaceBetween={10} // Расстояние между слайдами
               slidesPerView={1} // Количество слайдов на одном экране
               loop={true} // Циклический слайдер
@@ -143,9 +147,15 @@ function Description() {
           {/* Описание */}
           <h3 className="text-xl font-semibold mt-[40px] mb-4">Описание:</h3>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            {project.description}
+            {project.description
+              ? project.description.match(/.{1,80}/g).map((part, idx) => (
+                  <span key={idx}>
+                    {part}
+                    <br />
+                  </span>
+                ))
+              : ""}
           </p>
-
           {/* Лайк */}
           <div className="flex items-center gap-2 mb-6">
             <button

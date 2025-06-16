@@ -157,25 +157,25 @@ function Profile() {
               onChange={handleFileChange}
             />
             <div className="flex items-center ">
-            <button
-              onClick={() => fileInputRef.current.click()}
-              className="px-4 py-1 border rounded  text-sm"
-            >
-              {currentContent.selectFile}
-            </button>
+              <button
+                onClick={() => fileInputRef.current.click()}
+                className="px-4 py-1 border rounded  text-sm"
+              >
+                {currentContent.selectFile}
+              </button>
 
-            <button
-              onClick={handleAvatarUpload}
-              className="px-4 py-1 border rounded text-sm ml-2 bg-blue-600 text-white hover:bg-blue-700 transition"
-            >
-              {currentContent.updateImage}
-            </button>
-            <button
-              onClick={handleLogout}
-              className="px-4 py-1 border flex rounded ml-[180px] bg-red-100 text-red-600 hover:bg-red-200 transition text-sm"
-            >
-              🚪{currentContent.getout}
-            </button>
+              <button
+                onClick={handleAvatarUpload}
+                className="px-4 py-1 border rounded text-sm ml-2 bg-blue-600 text-white hover:bg-blue-700 transition"
+              >
+                {currentContent.updateImage}
+              </button>
+              <button
+                onClick={handleLogout}
+                className="px-4 py-1 border flex rounded ml-[200px] bg-red-100 text-red-600 hover:bg-red-200 transition text-sm"
+              >
+              🚪 {currentContent.getout}
+              </button>
             </div>
           </div>
         </div>
@@ -200,6 +200,7 @@ function Profile() {
                 onChange={handleChange}
                 className="w-full border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-blue-200"
                 required
+                maxLength={12}
               />
             </div>
             <div>
@@ -212,6 +213,7 @@ function Profile() {
                 onChange={handleChange}
                 className="w-full border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-blue-200"
                 required
+                maxLength={12}
               />
             </div>
             <div>
@@ -224,6 +226,7 @@ function Profile() {
                 onChange={handleChange}
                 className="w-full border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-blue-200"
                 required
+                maxLength={12}
               />
             </div>
             <div>
@@ -277,47 +280,52 @@ function Profile() {
 
         {/* Твои проекты */}
         <div className="bg-white rounded-xl shadow p-6 mt-8 mb-8">
-  <h2 className="text-xl font-semibold mb-4">
-    {currentContent.yourProjects} ({projects.length})
-  </h2>
-  {projects.length === 0 ? (
-    <div className="text-gray-500">У тебя пока нет проектов.</div>
-  ) : (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-5">
-      {projects.map((project) => (
-        <div
-          key={project._id}
-          className="bg-gray-50 border rounded-lg p-4 shadow hover:shadow-md transition"
-        >
-          <h3 className="text-lg text-gray-800">{project.title}</h3>
-          <div className="text-sm text-gray-500">
-            <p>
-              👍 {project.likes} {currentContent.likes}
-            </p>
-            <p className="mt-2">
-              {currentContent.created}{" "}
-              {new Date(project.createdAt).toLocaleDateString()}
-            </p>
-          </div>
-          <div className="flex justify-end gap-2 mt-3">
-            <button
-              className="text-blue-600 text-sm hover:underline"
-              onClick={() => navigate(`/edit-project/${project._id}`)}
-            >
-              {currentContent.edit}
-            </button>
-            <button
-              className="text-red-600 text-sm hover:underline"
-              onClick={() => handleDelete(project._id)}
-            >
-              {currentContent.delete}
-            </button>
-          </div>
+          <h2 className="text-xl font-semibold mb-4">
+            {currentContent.yourProjects} ({projects.length})
+          </h2>
+          {projects.length === 0 ? (
+            <div className="text-gray-500">У тебя пока нет проектов.</div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-5">
+              {projects.map((project) => (
+                <div
+                  key={project._id}
+                  className="bg-gray-50 border rounded-lg p-4 shadow hover:shadow-md transition"
+                >
+                  <h3 className="text-lg text-gray-800">
+                    {" "}
+                    {project.title.length > 40
+                      ? project.title.slice(0, 40) + "..."
+                      : project.title}
+                  </h3>
+                  <div className="text-sm text-gray-500">
+                    <p>
+                      👍 {project.likes} {currentContent.likes}
+                    </p>
+                    <p className="mt-2">
+                      {currentContent.created}{" "}
+                      {new Date(project.createdAt).toLocaleDateString()}
+                    </p>
+                  </div>
+                  <div className="flex justify-end gap-2 mt-3">
+                    <button
+                      className="text-blue-600 text-sm hover:underline"
+                      onClick={() => navigate(`/edit-project/${project._id}`)}
+                    >
+                      {currentContent.edit}
+                    </button>
+                    <button
+                      className="text-red-600 text-sm hover:underline"
+                      onClick={() => handleDelete(project._id)}
+                    >
+                      {currentContent.delete}
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
-      ))}
-    </div>
-  )}
-</div>
 
         {/* Проекты, которые ты лайкнул */}
         <div className="bg-white rounded-xl shadow p-6">
@@ -335,7 +343,12 @@ function Profile() {
                   key={project._id}
                   className="bg-blue-50 border rounded-lg p-4 shadow hover:shadow-md transition"
                 >
-                  <h3 className="text-lg  text-gray-800">{project.title}</h3>
+                  <h3 className="text-lg  text-gray-800">
+                    {" "}
+                    {project.title.length > 40
+                      ? project.title.slice(0, 40) + "..."
+                      : project.title}
+                  </h3>
                   <p className="text-sm text-gray-600">
                     👍 {project.likes} {currentContent.likes}
                   </p>

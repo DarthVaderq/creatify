@@ -67,6 +67,7 @@ const Register = () => {
               className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
+              maxLength={12}
             />
             <input
               type="text"
@@ -74,6 +75,7 @@ const Register = () => {
               className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
+              maxLength={12}
             />
             <input
               type="text"
@@ -81,6 +83,7 @@ const Register = () => {
               className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
+              maxLength={12}
             />
             <input
               type="email"
