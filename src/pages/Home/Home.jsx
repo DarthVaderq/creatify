@@ -260,7 +260,7 @@ function Home() {
             </div>
 
             {/* Поле поиска */}
-            <div className="flex items-center ml-[120px] bg-white rounded-full px-3 py-1 flex-grow">
+            <div className="flex items-center  bg-white rounded-full px-3 py-1 flex-grow">
               <input
                 type="text"
                 placeholder={currentContent.searchPlaceholder}

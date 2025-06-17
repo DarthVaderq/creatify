@@ -1,7 +1,8 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { CalendarDays } from "lucide-react";
-
+import { LanguageContext } from "../entities/LanguageContext";
+import translations from "./translations-calendar";
 const months = [
   "Январь", "Февраль", "Март", "Апрель", 
   "Май", "Июнь", "Июль", "Август",  
@@ -15,7 +16,11 @@ export default function CalendarFilter({ onApply, onCancel }) {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedHour, setSelectedHour] = useState(new Date().getHours());
   const [selectedMinute, setSelectedMinute] = useState(new Date().getMinutes());
-
+    const { language } = useContext(LanguageContext); // Получаем текущий язык
+  const currentContent = translations[language]; // Получаем текст на выбранном языке
+     if (!currentContent) {
+    return <p>Переводы для выбранного языка отсутствуют.</p>;
+  }
   const daysInMonth = new Date(
     selectedDate.getFullYear(),
     selectedDate.getMonth() + 1,
@@ -61,7 +66,7 @@ export default function CalendarFilter({ onApply, onCancel }) {
         className="flex items-center gap-1 px-4 py-2 bg-white border border-gray-200 rounded-full hover:bg-gray-100 transition"
       >
         <CalendarDays className="w-4 h-4 text-blue-500" />
-        Календарь
+        {currentContent.Calendar}
       </button>
 
       {showDropdown && (
@@ -126,7 +131,7 @@ export default function CalendarFilter({ onApply, onCancel }) {
               }}
               className="text-gray-400 hover:text-gray-500"
             >
-              Отменить
+              {currentContent.Сancel || "Отменить"}
             </button>
 
             <div className="flex gap-2">
@@ -159,7 +164,7 @@ export default function CalendarFilter({ onApply, onCancel }) {
               onClick={handleApply}
               className="text-blue-500 hover:text-blue-600"
             >
-              Подтвердить
+              {currentContent.Confirm}
             </button>
           </div>
         </div>

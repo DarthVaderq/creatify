@@ -98,25 +98,6 @@ function Rating() {
           <h1 className="text-3xl font-bold mb-6 text-center">
             Рейтинг проектов
           </h1>
-          <div className="bg-white rounded-xl shadow p-6 mb-6 text-center">
-            <div className="flex justify-center mt-6 gap-6">
-              <div className="flex flex-col items-center">
-                <span className="text-2xl">🥇</span>
-                <span className="font-bold mt-1">1 000 ❤</span>
-                <span className="text-xs text-gray-500">за 1-е место</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="text-2xl">🥈</span>
-                <span className="font-bold mt-1">500 ❤</span>
-                <span className="text-xs text-gray-500">за 2-е место</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="text-2xl">🥉</span>
-                <span className="font-bold mt-1">300 ❤</span>
-                <span className="text-xs text-gray-500">за 3-е место</span>
-              </div>
-            </div>
-          </div>
 
           <div className="flex flex-wrap justify-center gap-3 mb-6">
             {categories.map((cat) => (
@@ -135,7 +116,7 @@ function Rating() {
               <table className="min-w-full table-auto text-sm">
                 <thead className="bg-gray-200">
                   <tr className="text-left">
-                    <th className="p-4">#</th>
+                    <th className="p-4 ml-2">#</th>
                     <th className="p-4">Проект</th>
                     <th className="p-4">Категория</th>
                     <th className="p-4">Автор</th>
@@ -144,51 +125,72 @@ function Rating() {
                   </tr>
                 </thead>
                 <tbody>
-                  {projects.map((project, index) => (
-                    <tr
-                      key={project._id}
-                      className="border-t hover:bg-gray-50 transition"
-                    >
-                      <td className="p-4 font-semibold">{index + 1}</td>
-                      <td className="p-4 max-w-xs">
-                        <div className="font-medium line-clamp-2">
-                          {project.title}
-                        </div>
-                        {project.description && (
-                          <div className="text-gray-500 text-xs line-clamp-2">
-                            {project.description}
+                  {[...projects]
+                    .sort((a, b) => (b.likes || 0) - (a.likes || 0))
+                    .map((project, index) => (
+                      <tr
+                        key={project._id}
+                        className="border-t hover:bg-gray-50 transition"
+                      >
+                        <td className="pl-4 ml-10 font-semibold">
+                          {index === 0 ? (
+                            <img
+                              className="h-[50px] w-[50px]"
+                              src="/1st.png"
+                              alt="Home"
+                            />
+                          ) : index === 1 ? (
+                            <img
+                              className="h-[50px] w-[50px]"
+                              src="/2st.png"
+                              alt="Home"
+                            />
+                          ) : index === 2 ? (
+                            <img
+                              className="h-[50px] w-[50px]"
+                              src="/3st.png"
+                              alt="Home"
+                            />
+                          ) : (
+                            index + 1
+                          )}
+                        </td>
+                        {/* ...остальные ячейки... */}
+
+                        <td className="p-4 max-w-xs">
+                          <div className="font-medium line-clamp-2">
+                            {project.title}
                           </div>
-                        )}
-                      </td>
-                      <td className="p-4">
-                        {Array.isArray(project.category)
-                          ? project.category
-                              .filter((c) => c !== "Всё")
-                              .join(", ")
-                          : project.category}
-                      </td>
-                      <td className="p-4">
-                        <div className="flex items-center gap-2">
-                          <Avatar src={project.author?.avatar} />
+                        </td>
+                        <td className="p-4">
+                          {Array.isArray(project.category)
+                            ? project.category
+                                .filter((c) => c !== "Всё")
+                                .join(", ")
+                            : project.category}
+                        </td>
+                        <td className="p-4">
+                          <div className="flex items-center gap-2">
+                            <Avatar src={project.author?.avatar} />
+                            <a
+                              href={`/profile/${project.author?._id}`}
+                              className="text-blue-600 hover:underline"
+                            >
+                              {project.author?.name || "Неизвестно"}
+                            </a>
+                          </div>
+                        </td>
+                        <td className="p-4 text-center">{project.likes}</td>
+                        <td className="p-4 text-center">
                           <a
-                            href={`/profile/${project.author?._id}`}
+                            href={`/description/${project._id}`}
                             className="text-blue-600 hover:underline"
                           >
-                            {project.author?.name || "Неизвестно"}
+                            Подробнее →
                           </a>
-                        </div>
-                      </td>
-                      <td className="p-4 text-center">{project.likes}</td>
-                      <td className="p-4 text-center">
-                        <a
-                          href={`/description/${project._id}`}
-                          className="text-blue-600 hover:underline"
-                        >
-                          Подробнее →
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
+                        </td>
+                      </tr>
+                    ))}
                 </tbody>
               </table>
             </div>
