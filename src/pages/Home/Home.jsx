@@ -260,11 +260,11 @@ function Home() {
             </div>
 
             {/* Поле поиска */}
-            <div className="flex items-center  bg-white rounded-full px-3 py-1 flex-grow">
+            <div className="flex items-center ml-[120px] bg-white rounded-full px-3 py-1 flex-grow">
               <input
                 type="text"
                 placeholder={currentContent.searchPlaceholder}
-                className="ml-5 outline-none w-full bg-transparent text-gray-700"
+                className="ml-2 outline-none w-full bg-transparent text-gray-700"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -284,20 +284,20 @@ function Home() {
                 className="flex items-center gap-1 px-9 py-2 bg-white border border-gray-200 rounded-full hover:bg-gray-100 transition"
               >
                 <SlidersHorizontal className="w-4 h-4" />
-                Фильтр
+                {currentContent.filterButton}
               </button>
 
               {showFilterDropdown && (
                 <div className="absolute z-10  mt-5 w-64 p-4 bg-white border border-gray-300 rounded-xl shadow-lg text-sm">
                   <div className="absolute top-[-10px] left-16 w-5 h-5 bg-white border-l border-t border-gray-300 rotate-45" />
                   <p className="font-medium text-center mb-3">
-                    Фильтрация по голосу
+                    {currentContent.filter_voice}
                   </p>
 
                   <div className="flex items-center justify-center gap-2 mb-3">
                     <input
                       type="number"
-                      placeholder="От"
+                      placeholder={currentContent.from}
                       value={minVotes}
                       onChange={(e) => setMinVotes(e.target.value)}
                       className="w-20 py-1 px-2 border border-gray-300 rounded-md text-center outline-none"
@@ -305,7 +305,7 @@ function Home() {
                     <span>:</span>
                     <input
                       type="number"
-                      placeholder="До"
+                      placeholder={currentContent.to}
                       value={maxVotes}
                       onChange={(e) => setMaxVotes(e.target.value)}
                       className="w-20 py-1 px-2 border border-gray-300 rounded-md text-center outline-none"
@@ -321,7 +321,7 @@ function Home() {
                         onChange={() => setSortOrder("min")}
                         className="accent-blue-500 w-4 h-4"
                       />
-                      <span>Наименьшее</span>
+                      <span>{currentContent.Least}</span>
                     </label>
                     <label className="flex items-center gap-1 cursor-pointer">
                       <input
@@ -331,7 +331,7 @@ function Home() {
                         onChange={() => setSortOrder("max")}
                         className="accent-blue-500 w-4 h-4"
                       />
-                      <span>Наибольшее</span>
+                      <span>{currentContent.Most}</span>
                     </label>
                   </div>
 
@@ -340,13 +340,13 @@ function Home() {
                       className="text-gray-400 hover:text-gray-500"
                       onClick={handleCancel}
                     >
-                      Отменить
+                      {currentContent.cancel}
                     </button>
                     <button
                       className="text-blue-500 hover:text-blue-600"
                       onClick={handleApply}
                     >
-                      Подтвердить
+                      {currentContent.confirm}
                     </button>
                   </div>
                 </div>
@@ -393,11 +393,11 @@ function Home() {
           {/* Список проектов */}
           <div className="w-full lg:w-3/4 flex flex-col space-y-6 gap-">
             {loading ? (
-              <p>Загрузка проектов...</p>
+              <p>{currentContent.loading}</p>
             ) : error ? (
               <p className="text-red-500">{error}</p>
             ) : filteredProjects.length === 0 ? (
-              <p>К сожалению такого проекта нет!</p>
+              <p>{currentContent.projects_not_found}</p>
             ) : (
               currentProjects.map((project) => {
                 // Получаем первую категорию (основную)
@@ -436,7 +436,7 @@ function Home() {
                 return (
                   <div
                     key={project._id}
-                    className={`rounded-xl p-6 shadow ${style} transition w-full max-w-3xl mx-auto`}
+                    className={`rounded-xl p-6 shadow ${style} transition`}
                   >
                     <div className="flex justify-between items-start">
                       {/* Левая часть */}
@@ -485,8 +485,8 @@ function Home() {
 
                         {/* Описание */}
                         <p className="text-sm ml-[60px] text-gray-600 max-w-xl mt-1">
-                          {project.description.length > 80
-                            ? project.description.slice(0, 60) + "..."
+                          {project.description.length > 30
+                            ? project.description.slice(0, 20) + "..."
                             : project.description}
                         </p>
                       </div>
